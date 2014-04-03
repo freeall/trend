@@ -1,0 +1,17 @@
+{
+  "name": "trend",
+  "version": "0.0.0",
+  "description": "Find out how a chart (array of values) are trending. Compares the last X points to the previous Y points before them.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node test/index.js"
+  },
+  "author": "freeall",
+  "license": "MIT",
+  "devDependencies": {
+    "tape": "^2.12.1"
+  }
+}

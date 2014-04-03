@@ -1,4 +1,4 @@
-var trends = require('../index');
+var trend = require('../index');
 var test = require('tape');
 
 var fail1 = [40, 39, 38, 41, 42, 40, 37, 43, 41, 40,  2,  0,  1];
@@ -11,39 +11,39 @@ var stdOptions = { lastPoints:3, avgPoints:10 };
 
 var test1 = function() {
 	test('Simple fail', function(t) {
-		t.ok(trends(fail1, stdOptions) < 0.10 );
+		t.ok(trend(fail1, stdOptions) < 0.10 );
 		t.end();
 	});
 };
 var test2 = function() {
 	test('Fail last two', function(t) {
-		t.ok(trends(fail2, stdOptions) < 0.10);
+		t.ok(trend(fail2, stdOptions) < 0.10);
 		t.end();
 	});
 };
 var test3 = function() {
 	test('Only one low point', function(t) {
-		console.log(trends(ignr1, stdOptions))
-		t.ok(trends(ignr1, stdOptions) > 0.50);
+		console.log(trend(ignr1, stdOptions))
+		t.ok(trend(ignr1, stdOptions) > 0.50);
 		t.end();
 	});
 };
 var test4 = function() {
 	test('Only two low point', function(t) {
-		t.ok(trends(ignr2, stdOptions) > 0.50);
+		t.ok(trend(ignr2, stdOptions) > 0.50);
 		t.end();
 	});
 };
 var test5 = function() {
 	test('Should ignore if array is too small', function(t) {
-		t.notOk(trends(ignr3, stdOptions));
+		t.notOk(trend(ignr3, stdOptions));
 		t.end();
 	});
 };
 // Cannot do this yet
 // var test5 = function() {
 // 	test('Should ignore extreme elements', function(t) {
-// 		t.equal(trends(ignr4), true);
+// 		t.equal(trend(ignr4), true);
 // 		t.end();
 // 	});
 // };

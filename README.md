@@ -1,4 +1,4 @@
-# trend
+# trend [![build status](https://secure.travis-ci.org/freeall/trend.png)](http://travis-ci.org/freeall/trend)
 
 Use to find out how a chart (array of values) are trending. Compares the last X points to the previous Y points before them.
 

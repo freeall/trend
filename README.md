@@ -6,6 +6,8 @@ Takes the maximum point of the last X points, and compares it to the average of 
 
 Can ignore results if the average is below a certain minimum.
 
+Returns `null` if the result is ignored (e.g., array is too small or average is too low).
+
 ## Example
 
 ``` js
@@ -31,7 +33,7 @@ Takes an array of numbers and calculates a trend.
 
 Returns a number that says how much the chart is trending at the end, i.e. growth if `>1` and decline if `<1`.
 
-If the array is not long enough to calculate both an average over the last points and the rest it will return undefined.
+If the array is not long enough to calculate both an average over the last points and the rest it will return `null`.
 
 ## Options
 
@@ -47,4 +49,4 @@ How many elements should be taken to calcuate an average.
 
 ### avgMinimum
 
-Ignore (i.e. return `undefined`) if the average is below a minimum. This makes sure that we can ignore charts with low 'activity'.
+Ignore (i.e. return `null`) if the average is below a minimum. This makes sure that we can ignore charts with low 'activity'.

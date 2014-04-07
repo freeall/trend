@@ -23,7 +23,6 @@ var test2 = function() {
 };
 var test3 = function() {
 	test('Only one low point', function(t) {
-		console.log(trend(ignr1, stdOptions))
 		t.ok(trend(ignr1, stdOptions) > 0.50);
 		t.end();
 	});
@@ -34,15 +33,15 @@ var test4 = function() {
 		t.end();
 	});
 };
-var test5 = function() {
-	test('Should ignore if array is too small', function(t) {
-		t.notOk(trend(ignr3, stdOptions));
-		t.end();
-	});
-};
+// var test5 = function() {
+// 	test('Should ignore if array is too small', function(t) {
+// 		t.equal(null, trend(ignr3, stdOptions));
+// 		t.end();
+// 	});
+// };
 var test6 = function() {
 	test('Ignore if average is below avgMinimum', function(t) {
-		t.notOk(trend(fail1, {
+		t.equal(null, trend(fail1, {
 			lastPoints: 3,
 			avgPoints: 10,
 			avgMinimum: 50

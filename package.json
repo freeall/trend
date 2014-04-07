@@ -1,6 +1,6 @@
 {
   "name": "trend",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Find out how a chart (array of values) are trending. Compares the last X points to the previous Y points before them.",
   "main": "index.js",
   "directories": {

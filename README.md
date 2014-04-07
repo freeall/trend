@@ -18,7 +18,8 @@ var chart = [10,11,9,31,12,14,15,24,26,18,0,0,0];
 var growth = trend(chart, {
 	lastPoints: 3,
 	avgPoints: 10,
-	avgMinimum: 10
+	avgMinimum: 10,
+	reversed: false
 });
 
 if (growth < 0.25) console.log('The chart is going down! Is the server up?');
@@ -43,10 +44,22 @@ How many elements should be taken from the end of the array to calculate the `la
 
 The calculation is done by taking `Math.max` of the last `lastPoints` numbers.
 
+Defaults to 1.
+
 ### avgPoints
 
 How many elements should be taken to calcuate an average.
 
+Defaults to 10.
+
 ### avgMinimum
 
 Ignore (i.e. return `null`) if the average is below a minimum. This makes sure that we can ignore charts with low 'activity'.
+
+No default value.
+
+### reversed
+
+If your array is so that the newest entry is at the beginning, then use the `reversed` property.
+
+Default is false.

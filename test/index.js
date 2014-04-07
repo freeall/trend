@@ -4,7 +4,6 @@ var test = require('tape');
 var fail1 = [40, 39, 38, 41, 42, 40, 37, 43, 41, 40,  2,  0,  1];
 var fail2 = [40, 39, 38, 41, 42, 40, 37, 43, 40,  2,  1,  2,  0];
 var rvsd1 = JSON.parse(JSON.stringify(fail1)).reverse();
-console.log(rvsd1)
 var ignr1 = [40, 39, 38, 41, 42, 40, 37, 43, 41, 39, 38, 32,  2];
 var ignr2 = [40, 39, 38, 41, 42, 40, 37, 43, 41, 39, 35, 35,  2];
 var ignr3 = [10,  0]; // Too few elements to calculate 

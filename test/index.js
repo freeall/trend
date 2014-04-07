@@ -40,6 +40,16 @@ var test5 = function() {
 		t.end();
 	});
 };
+var test6 = function() {
+	test('Ignore if average is below avgMinimum', function(t) {
+		t.notOk(trend(fail1, {
+			lastPoints: 3,
+			avgPoints: 10,
+			avgMinimum: 50
+		}));
+		t.end();
+	});
+};
 // Cannot do this yet
 // var test5 = function() {
 // 	test('Should ignore extreme elements', function(t) {
@@ -53,3 +63,4 @@ test2();
 test3();
 test4();
 // test5();
+test6();

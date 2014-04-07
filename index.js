@@ -11,5 +11,6 @@ module.exports = function(arr, options) {
 	var chartAvg = chartArr.reduce(function(res, val) { return res += val }) / chartArr.length;
 	var lastAvg = Math.max.apply(null, lastArr);
 
+	if (options.avgMinimum !== undefined && chartAvg < options.avgMinimum) return;
 	return lastAvg/chartAvg;
 };

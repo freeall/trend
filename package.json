@@ -6,6 +6,10 @@
   "directories": {
     "test": "test"
   },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:freeall/trend.git"
+  },
   "scripts": {
     "test": "node test/index.js"
   },
